@@ -10,19 +10,15 @@ const AddTodoForm = () => {
 
 	const onSubmit = (event) => {
 		event.preventDefault();
-		// if (title === '') {
-		// 	setErrors({ errors: { title: 'Title is required' } });
-		// 	return;
-		//   }
-		// 	console.log(errors);
+		
 
 		  const newTodo = {
-			  id:Date.now(),
+			//   id:Date.now(),
 			  title:title,
-			  completed:false
+			 // completed:false
 			
 		  };
-		  console.log(newTodo);
+		//  console.log(newTodo.title);
 		dispatch(addTodo(newTodo));
 
 		 setTitle('');

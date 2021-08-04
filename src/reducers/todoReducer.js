@@ -1,21 +1,15 @@
 import { GET_TODOS, ADD_TODO, DELETE_TODO, COMPLETED_TODO } from "../types/type";
 const initialState = {
-    todos: [{ id: 1, title: 'todo1', completed: false },
-    { id: 2, title: 'todo2', completed: false },
-    { id: 3, title: 'todo3', completed: true },
-    { id: 4, title: 'todo4', completed: true },
-
-
-    ]
-
+    todos:[],
+    loading:true
 };
 
 const todoReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case GET_TODOS:
-            return { ...state, todos: action.payload }
-
+            return { ...state, todos: action.payload, loading:false }
+            
         // case 'GET_TODO':
         //   return { ...state, contact: action.payload }
 
